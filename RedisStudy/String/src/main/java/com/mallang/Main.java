@@ -41,6 +41,7 @@ public class Main {
                 counter = jedis.decrBy("counter", 20L);
                 System.out.println(counter);
 
+                // Jedis Pipeline 사용 -> 대량의 데이터 set 성능 최적화
                 Pipeline pipelined = jedis.pipelined();
                 pipelined.set("users:400:name", "chunsik");
                 pipelined.set("users:400:email", "chunsik@chunsik.com");
