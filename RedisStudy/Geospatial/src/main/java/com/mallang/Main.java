@@ -17,12 +17,12 @@ public class Main {
             try (var jedis = jedisPool.getResource()) {
 
                 // geo add
-//                jedis.geoadd("store:geo", 127.02985530619755, 37.49911212874, "some1");
-//                jedis.geoadd("store:geo", 127.0333352287619, 37.491921163986234, "some2");
+                jedis.geoadd("store:geo", 127.02985530619755, 37.49911212874, "some1");
+                jedis.geoadd("store:geo", 127.0333352287619, 37.491921163986234, "some2");
 
                 // geo dist
-//                Double geodist = jedis.geodist("store:geo", "some1", "some2");
-//                System.out.println(geodist);
+                Double geodist = jedis.geodist("store:geo", "some1", "some2");
+                System.out.println(geodist);
 
                 // geo search
                 List<GeoRadiusResponse> radiusResponseList = jedis.geosearch (
