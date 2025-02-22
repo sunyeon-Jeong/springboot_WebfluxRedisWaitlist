@@ -18,32 +18,32 @@ public class Main {
 
                 /* LIST */
                 // 1. stack : Last In First Out
-//                jedis.rpush("stack1", "aaaa");
-//                jedis.rpush("stack1", "bbbb");
-//                jedis.rpush("stack1", "cccc");
+                jedis.rpush("stack1", "aaaa");
+                jedis.rpush("stack1", "bbbb");
+                jedis.rpush("stack1", "cccc");
 
 //                List<String> stack1 = jedis.lrange("stack1", 0, -1);
 //                stack1.forEach(System.out::println);
 
-//                System.out.println(jedis.rpop("stack1"));
-//                System.out.println(jedis.rpop("stack1"));
-//                System.out.println(jedis.rpop("stack1"));
+                System.out.println(jedis.rpop("stack1"));
+                System.out.println(jedis.rpop("stack1"));
+                System.out.println(jedis.rpop("stack1"));
 
                 // 2. queue : 순차적처리, First In First Out
-//                jedis.rpush("queue1", "zzzz");
-//                jedis.rpush("queue1", "aaaa");
-//                jedis.rpush("queue1", "cccc");
+                jedis.rpush("queue1", "zzzz");
+                jedis.rpush("queue1", "aaaa");
+                jedis.rpush("queue1", "cccc");
 
-//                System.out.println(jedis.lpop("queue1"));
-//                System.out.println(jedis.lpop("queue1"));
-//                System.out.println(jedis.lpop("queue1"));
+                System.out.println(jedis.lpop("queue1"));
+                System.out.println(jedis.lpop("queue1"));
+                System.out.println(jedis.lpop("queue1"));
 
                 // 3. block : BLPOP, BRPOP
-//                List<String> blpop = jedis.blpop(10, "queue:blocking");
-//
-//                if (blpop != null) {
-//                    blpop.forEach(System.out::println);
-//                }
+                List<String> blpop = jedis.blpop(10, "queue:blocking");
+
+                if (blpop != null) {
+                    blpop.forEach(System.out::println);
+                }
 
                 /* SET */
                 jedis.sadd("users:500:follow", "100", "200", "300");
