@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: "jdbc:mysql://localhost:3306/sns"
+    username: root
+    password: mallang
+  jpa:
+    hibernate.ddl-auto: create # create option : table trop -> new create
+    show-sql: true
