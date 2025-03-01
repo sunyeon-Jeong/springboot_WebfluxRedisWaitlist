@@ -6,3 +6,5 @@ spring:
   jpa:
     hibernate.ddl-auto: create # create option : table trop -> new create
     show-sql: true
+  jmx:
+    enabled: false
