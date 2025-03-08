@@ -11,5 +11,5 @@ spring:
     password: mallang
   # jpa config
   jpa:
-    hibernate.ddl-auto: create # entity -> create table auto
+    hibernate.ddl-auto: update # entity -> create table auto
     show-sql: true
