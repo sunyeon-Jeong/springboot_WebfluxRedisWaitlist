@@ -1,0 +1,15 @@
+spring:
+  # redis config
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+  # db config
+  datasource:
+    url: "jdbc:mysql://localhost:3306/sns"
+    username: root
+    password: mallang
+  # jpa config
+  jpa:
+    hibernate.ddl-auto: create # entity -> create table auto
+    show-sql: true
